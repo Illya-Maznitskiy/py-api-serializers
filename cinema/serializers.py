@@ -1,10 +1,16 @@
 from rest_framework import serializers
 
-from cinema.models import Actor, Genre, CinemaHall, Movie, MovieSession
+from cinema.models import (
+    Actor,
+    Genre,
+    CinemaHall,
+    Movie,
+    MovieSession
+)
 
 
 class ActorSerializer(serializers.ModelSerializer):
-    full_name = serializers.CharField(source="__str__", read_only=True)
+    full_name = serializers.CharField(read_only=True)
 
     class Meta:
         model = Actor
