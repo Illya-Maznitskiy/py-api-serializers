@@ -10,8 +10,6 @@ from cinema.models import (
 
 
 class ActorSerializer(serializers.ModelSerializer):
-    full_name = serializers.CharField(read_only=True)
-
     class Meta:
         model = Actor
         fields = [
